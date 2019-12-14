@@ -1,0 +1,259 @@
+:root{
+     font-family: "Raleway","merriweather", sans-serif;
+     font-size: 0.75em;
+     color: black;
+}
+ #application{
+     background-color: black;
+     position:relative;
+     height: 100%;
+     margin:0;
+    /* to add gradient color background*/
+     background: rgb(102,45,145);
+     background: linear-gradient(0deg, rgba(102,45,145,1) 0%, rgba(152,57,112,0.9391106784510679) 35%, rgba(47,81,122,1) 100%);
+}
+ .header{
+     background-color: white;
+     width: 100%;
+     min-height: auto;
+     overflow: auto;
+     display: flex;
+     flex-direction: column;
+     flex-flow: wrap;
+}
+ .header h1{
+     color: black;
+     font-family: "Dancing Script","Voltage", cursive;
+     font-size: 3em;
+     margin-left: 25px;
+}
+ nav{
+     color: #2f3192;
+     margin-left: auto;
+     align-self: flex-end;
+     border-bottom: 1px dashed #2f3192;
+     margin-bottom: 1px;
+     width: 100%;
+     position: absolute;
+}
+ nav a {
+     text-decoration: none;
+}
+ nav ul {
+     background: darkblue;
+     list-style: none;
+     margin: 0;
+     padding-left: 0;
+     float: right;
+}
+ nav li {
+     color: black;
+     background: #c7b5c9;
+     display: block;
+     float: left;
+     padding: 1rem;
+     position: relative;
+     text-decoration: none;
+     transition-duration: 0.5s;
+}
+ nav li a {
+     color: white;
+}
+ nav li:hover {
+     background: #672d8d;
+     cursor: pointer;
+}
+ nav ul li ul {
+     background: #c7b5c9;
+     visibility: hidden;
+     opacity: 0;
+     min-width: 5rem;
+     position: absolute;
+     transition: all 0.5s ease;
+     margin-top: 1rem;
+     left: 0;
+     display: none;
+}
+ nav ul li:hover > ul, ul li ul:hover {
+     visibility: visible;
+     opacity: 1;
+     display: block;
+}
+ nav ul li ul li {
+     clear: both;
+     width: 100%;
+}
+ .header img {
+     border: 1px solid #2f3192;
+     box-shadow: 10px 10px 5px #983970;
+     border-radius: 50px;
+     vertical-align: middle;
+     float: left;
+     width: 5%;
+     height: 5%;
+     margin: 15px 0 0 15px;
+}
+ #wrapper{
+     overflow: hidden;
+     display: flex;
+}
+ .content{
+     overflow: hidden;
+
+}
+ .content2{
+     overflow: hidden;
+     display: grid;
+     grid-template-columns: auto auto auto;
+}
+
+.content_rec{
+  overflow: hidden;
+  width: 90%;
+  margin:20px;
+}
+
+ .blog {
+     margin: 15px 5px 15px 10px;
+     padding: 10px;
+     float:left;
+     display: inline-flex;
+     border-radius: 35px;
+    /*add multi-colored shadow effect to container*/
+     box-shadow: 5px 5px 5px #662d91, -5px 5px 5px #2f3192, 5px -5px 5px #974c7c;
+     background-color: white;
+     font-size: 1.25em;
+     max-height: 300px;
+     overflow-y: auto;
+}
+ .blog-vertical{
+     margin: 15px 5px 15px 10px;
+     padding: 10px;
+     border-radius: 35px;
+    /*add multi-colored shadow effect to container*/
+     box-shadow: 5px 5px 5px #662d91, -5px 5px 5px #2f3192, 5px -5px 5px #974c7c;
+     background-color: white;
+}
+ .blog-info-left{
+     width:15%
+}
+ .blog img{
+
+     height: 150px;
+     vertical-align: top;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     border: 1px solid black;
+     border-radius: 50%
+}
+ .blog-info-right{
+     width: 15%;
+}
+ .blog h3{
+     text-align: center;
+}
+ .blog h5{
+     text-align: center;
+}
+ .blog-text-right{
+     width: 85%;
+     margin-left: 25px;
+}
+ .blog-text-left{
+     width: 85%;
+     margin-right: 25px;
+}
+ .blog-text-center{
+     margin: 10px;
+}
+ .blog-info-top{
+     text-align: center;
+}
+ .blog-text-center img{
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 25%;
+}
+
+ footer{
+     background-color: white;
+     color: #000000;
+     font-style: italic;
+     text-align: center;
+     padding: 10px;
+}
+ * {
+     box-sizing: border-box;
+}
+
+hr{
+  height:12px;
+  border:0;
+  box-shadow: inset 0 12px 12px -12px rgba(60, 2, 90, 0.81);
+
+}
+ .tabs {
+     display: flex;
+     flex-wrap: wrap;
+     background: #c7b5c9;
+     margin: 15px 5px 15px 10px;
+     padding: 10px;
+     border-radius: 35px;
+    /*add multi-colored shadow effect to container*/
+     box-shadow: 5px 5px 5px #662d91, -5px 5px 5px #2f3192, 5px -5px 5px #974c7c;
+     background-color: white;
+     font-size: 1.25em;
+}
+ .input {
+     position: absolute;
+     opacity: 0;
+}
+ .label {
+     width: 100%;
+     padding: 20px 30px;
+     background: #c7b5c9;
+     cursor: pointer;
+     font-weight: bold;
+     font-size: 18px;
+     color: white;
+     transition: background 0.1s, color 0.1s;
+}
+ .label:hover {
+     background: #d8d8d8;
+}
+ .label:active {
+     background: #ccc;
+}
+ .input:focus + .label {
+     box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+     z-index: 1;
+}
+ .input:checked + .label {
+     background: #fff;
+     color: #000;
+}
+ @media (min-width: 600px) {
+     .label {
+         width: auto;
+    }
+}
+ .panel {
+     display: none;
+     padding: 20px 30px 30px;
+     background: #fff;
+     width: 100%;
+}
+ @media (min-width: 600px) {
+     .panel {
+         order: 99;
+    }
+}
+ .input:checked + .label + .panel {
+     display: block;
+}
+table{
+  text-align: left;
+  width: 100%;
+}
